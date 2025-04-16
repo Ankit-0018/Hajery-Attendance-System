@@ -1,11 +1,25 @@
-import { Button } from "@/components/ui/button"
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+
+import Employee from './pages/dashboard/Employee';
+
+
+
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
-  )
+
+<Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/Edashboard" element={<Employee />} />
+       
+      </Routes>
+    </Router>
+
+    
+  );
 }
 
-export default App
+export default App;
